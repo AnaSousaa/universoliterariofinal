@@ -10,35 +10,31 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Livro")
+@Table(name = "Livro")
 public class Livro {
-	
+
 	@Id
-	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String titulo;
 	private int isbn;
 	private int quantidade;
-	private String sinopse;
 
-	
+	private double preco;
 
-	private double preco;	
-	
-	
 	private byte[] imagem;
-	
+
 	@Column(name = "StatusLivro")
 	private String statusLivro;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "id_editora")
 	private Editora editora;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "id_autor")
 	private Autor autor;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "id_genero")
 	private Genero genero;
@@ -91,7 +87,6 @@ public class Livro {
 		this.imagem = imagem;
 	}
 
-
 	public String getStatusLivro() {
 		return statusLivro;
 	}
@@ -123,15 +118,5 @@ public class Livro {
 	public void setGenero(Genero genero) {
 		this.genero = genero;
 	}
-	public String getSinopse() {
-		return sinopse;
-	}
 
-	public void setSinopse(String sinopse) {
-		this.sinopse = sinopse;
-	}
-
-	
-	
-	
 }

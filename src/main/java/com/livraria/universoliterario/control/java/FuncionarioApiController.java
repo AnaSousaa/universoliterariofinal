@@ -37,13 +37,14 @@ public class FuncionarioApiController {
 		this.livroService = livroService;
 
 	}
+
 	@GetMapping("/ListaFunc")
 	public ResponseEntity<List<Funcionario>> getAllFuncionarios(@RequestParam(required = false) String title) {
 		try {
 			List<Funcionario> tutorials = new ArrayList<Funcionario>();
 
 			if (title == null)
-				funcionarioService.TodosFuncionarios().forEach(tutorials::add);
+				funcionarioService.ListarTodos().forEach(tutorials::add);
 
 			if (tutorials.isEmpty()) {
 				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -54,9 +55,10 @@ public class FuncionarioApiController {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-	
+
 	@PostMapping("/logarApi")
-	public ResponseEntity<Funcionario> Acessar(ModelMap map, @RequestBody Funcionario _funcionario, HttpSession session) {
+	public ResponseEntity<Funcionario> Acessar(ModelMap map, @RequestBody Funcionario _funcionario,
+			HttpSession session) {
 		try {
 			Funcionario funcionario = funcionarioService.acessar(_funcionario.getEmail(), _funcionario.getSenha());
 
@@ -70,26 +72,6 @@ public class FuncionarioApiController {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-
-//	@PostMapping("/funcionarioApi")
-//	public ResponseEntity<Funcionario> getOneFuncionario(
-//			@RequestBody Funcionario funcionario) {
-//
-//		try {
-//			int resposta = funcionarioService.logarApp(funcionario.getEmail(), funcionario.getSenha());
-//
-//			if (resposta == 1) {
-//
-//				Funcionario f2 = funcionarioService.findByEmail(funcionario.getEmail());
-//
-//				return new ResponseEntity<Funcionario>(f2, HttpStatus.OK);
-//
-//			}
-//		} catch (Exception e) {
-//			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-//		}
-//		return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-//	}
 
 	@GetMapping("/livrosApi")
 	public ResponseEntity<List<Livro>> getAllLivro(@RequestParam(required = false) String title2) {
