@@ -1,9 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lista de Funcionarios</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/ListaFunc.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+		integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+		integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+		crossorigin="anonymous"></script>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<title>Funcionários</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -23,27 +34,7 @@
     text-align: center;
     margin-bottom: 20px;
   }
-  .livro {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .livro img {
-    max-width: 100px;
-    height: auto;
-    margin-right: 10px;
-  }
-  .livro-info {
-    flex: 1;
-  }
-  .livro-btns {
-    display: flex;
-    align-items: center;
-  }
+
   .btn {
     background-color: #603fb6;
     color: #fff;
@@ -59,22 +50,79 @@
 </style>
 </head>
 <body>
-	<div class="sidebar">
-		<div class="adm">Administrador</div>
-		<ul class="menu">
-			<li><a href="/universoliterario/funcionario/EstoqueADM">Estoque ADM</a></li>
-			<li><a href="/universoliterario/funcionario/listaFun">Lista de funcionário</a></li>
-			<li><a href="/universoliterario/funcionario/AdicionarLivroADM">Adicionar livros</a></li>
-		</ul>
-	</div>
+	
+	<header>
+			<nav class="navbar">
+				<div class="logo">Universo Literário</div>
+			</nav>
+
+
+	</header>
+	<!--header acabou-->
+
+	<section class="main">
+
+		<div class="sidebar">
+			
+			<div class="logo_details">
+				
+				<i class="bx bx-menu" id="btn"></i>
+			</div>
+			<ul class="nav-list">
+				
+				<li>
+					<a href="/universoliterario/funcionario/AdicionarLivroADM">
+						<i class='bx bx-book-add'></i>
+						<span class="link_name">Adicionar Livro</span>
+					</a>
+					<span class="tooltip">Adicionar Livro</span>
+				</li>
+
+				<li>
+					<a href="/universoliterario/funcionario/EstoqueADM">
+						<i class='bx bx-box' ></i>
+						<span class="link_name">Estoque</span>
+					</a>
+					<span class="tooltip">Estoque</span>
+				</li>
+
+				<li>
+					<a href="/universoliterario/funcionario/listaFun">
+						<i class='bx bxs-user-circle' ></i>
+						<span class="link_name">Funcionários</span>
+					</a>
+					<span class="tooltip">Funcionários</span>
+				</li>
+
+				<li>
+					<a href="/universoliterario/funcionario/login">
+					  <i class="bx bx-log-out" id="log_out"></i>
+					  <span class="link_name">Sair</span>
+					</a>
+					<span class="tooltip">Sair</span>
+				  </li>
+
+				<li class="profile">
+					<div class="profile_details">
+						<div class="profile_content">
+							<h1 class="name"><span th:text="${session.funclogado.nome}"></span></h1>
+							<h1 class="designation"><span th:text="${session.funclogado.acesso}"></span></h1>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+			
+			</div>
+		</form>
+		<br>
+		<br>
+		
+				---------------------<h2>Funcionários disponiveis</h2>
   
 		<form action="#" th:action="@{/universoliterario/funcionario/ListaFunc}" class="row g-3 mx-5 mt-2" method="get">
 
-			<div class="barrapesquisa">
-				<input type="search" name="funcionario" id="barrapesq" autofocus placeholder=" Pesquisar no sistema">
-				<button type="submit" class="btn btn-success" id="inputBarraPesc">Buscar</button>
-
-			</div>
+			
 		</form>
 
 		<div class="api">
@@ -112,5 +160,8 @@
 		</div>
 		</div>
 	</section>
+	
+	<script src="/js/Sidebar.js"></script>
+	
 </body>
 </html>

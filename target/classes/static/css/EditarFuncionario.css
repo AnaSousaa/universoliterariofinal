@@ -1,26 +1,36 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
+@import url(https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400&display=swap%27%29%3B);
 
 :root {
-  --color-default: #038c5a;
-  --color-white: #fff;
-  --color-body: #e4e9f7;
-  --color-light: #e0e0e0;
+    --color-light-50: #f8fafc;
+
+    --color-dark-50: #797984;
+    --color-dark-100: #312d37;
+    --color-dark-900: #000;
+
+    --color-purple-50: #A682FF;
+    --color-purple-100: #7776E8;
+    --color-purple-200: #76B2E8;
+
+    --color-gradient: linear-gradient(90deg, var(--color-purple-50), var(--color-purple-100), var(--color-purple-200));
 }
 
-html,
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(212, 225, 212);
-}
+   * {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
 header {
-  background-color: #038c5a;
+  background-color: #af4ac4;
   padding: 5px 2%;
-  height: 80px;
+  height: 100px;
+}
+
+.navbar {
+  font-family: 'Poppins', sans-serif;
+  font-size: 100px;
 }
 
 .desc-prod {
@@ -41,7 +51,7 @@ header {
   height: 7px;
   padding: 7px 2%;
   height: 80px;
-  margin-top: -46px;
+  margin-top: -px;
 }
 
 .logo h2 {
@@ -64,7 +74,7 @@ header {
 }
 
 .logo {
-  margin-top: 5px;
+  margin-top: 7px;
   align-items: center;
 }
 
@@ -87,7 +97,7 @@ header {
   width: 100pt;
   height: 50px;
   border-radius: 25px;
-  background-color: #038c5a;
+  background-color: #71038c;
   color: white;
   border-color: black;
   margin-top: 40px;
@@ -102,7 +112,7 @@ header {
 }
 
 .logo {
-  margin-top: 5px;
+  margin-top: 7px;
 }
 
 .informations p {
@@ -117,23 +127,7 @@ header {
   margin-bottom: 20px;
 }
 
-.check {
-  height: 20px;
-  width: 40px;
-  position: absolute;
-}
 
-section.module.box {
-  width: 60%;
-  height: 60%;
-  border: 1px solid #ccc;
-  margin: 20px 0;
-  padding: 20px 20px;
-  border-radius: 5px;
-  margin-left:25%;
-  margin-top: 10%;
-  background-color: #f2f2f2;
-}
 
 #account {
   height: 60px;
@@ -146,7 +140,7 @@ section.module.box {
 }
 
 .botão:hover {
-  background-color: #42dd9d;
+  background-color: #a682ff;
   transition: 0.2s;
 }
 
@@ -377,3 +371,50 @@ section.module.box {
   width: 50px;
   background: none;
 }
+
+.container {
+				max-width: 600px;
+				margin: 20px auto;
+				padding: 20px;
+				background-color: #fff;
+				border-radius: 8px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+				align-items: center;
+			}
+
+			h2 {
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			label {
+				display: block;
+				margin-bottom: 8px;
+				font-weight: bold;
+			}
+
+			input[type="text"],
+			input[type="number"],
+			input[type="date"],
+			select,
+			textarea {
+				width: 100%;
+				padding: 10px;
+				margin-bottom: 20px;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				font-size: 14px;
+			}
+
+			textarea {
+				resize: vertical;
+			}
+
+			button {
+				background-color: #a682ff;
+				color: #fff;
+				padding: 10px 20px;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+			}

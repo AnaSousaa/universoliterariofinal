@@ -5,19 +5,76 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Editar Livro</title>
-	<link rel="stylesheet" href="css/cadastrar.css">
+	
+
+
 </head>
 
 <body>
-	<div class="sidebar">
-		<div class="adm">Administrador</div>
-		<ul class="menu">
-			<li><a href="#">Item 1</a></li>
-			<li><a href="#">Item 2</a></li>
-			<li><a href="#">Item 3</a></li>
-			<li><a href="#">Item 4</a></li>
-		</ul>
-	</div>
+	<header>
+			<nav class="navbar">
+				<div class="logo">Universo Literário</div>
+			</nav>
+
+
+	</header>
+	<!--header acabou-->
+
+	<section class="main">
+
+		<div class="sidebar">
+			
+			<div class="logo_details">
+				
+				<i class="bx bx-menu" id="btn"></i>
+			</div>
+			<ul class="nav-list">
+				
+				<li>
+					<a href="/universoliterario/funcionario/AdicionarLivroADM">
+						<i class='bx bx-book-add'></i>
+						<span class="link_name">Adicionar Livro</span>
+					</a>
+					<span class="tooltip">Adicionar Livro</span>
+				</li>
+
+				<li>
+					<a href="/universoliterario/funcionario/EstoqueADM">
+						<i class='bx bx-box' ></i>
+						<span class="link_name">Estoque</span>
+					</a>
+					<span class="tooltip">Estoque</span>
+				</li>
+
+				<li>
+					<a href="/universoliterario/funcionario/listaFun">
+						<i class='bx bxs-user-circle' ></i>
+						<span class="link_name">Funcionários</span>
+					</a>
+					<span class="tooltip">Funcionários</span>
+				</li>
+
+				<li>
+					<a href="/universoliterario/funcionario/login">
+					  <i class="bx bx-log-out" id="log_out"></i>
+					  <span class="link_name">Sair</span>
+					</a>
+					<span class="tooltip">Sair</span>
+				  </li>
+
+				<li class="profile">
+					<div class="profile_details">
+						<div class="profile_content">
+							<h1 class="name"><span th:text="${session.funclogado.nome}"></span></h1>
+							<h1 class="designation"><span th:text="${session.funclogado.acesso}"></span></h1>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+			
+			</div>
+		</form>
 	<div class="content">
 		<!-- Conteúdo da página -->
 
@@ -139,6 +196,6 @@
 
 			</form>
 	</div>
-	<script src="/js/EditarProduto.js"></script>
+	<script src="/js/Sidebar.js"></script>
 </body>
 </html>
