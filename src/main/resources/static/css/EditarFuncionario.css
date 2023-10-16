@@ -1,147 +1,23 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
-@import url(https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400&display=swap%27%29%3B);
-
-:root {
-    --color-light-50: #f8fafc;
-
-    --color-dark-50: #797984;
-    --color-dark-100: #312d37;
-    --color-dark-900: #000;
-
-    --color-purple-50: #A682FF;
-    --color-purple-100: #7776E8;
-    --color-purple-200: #76B2E8;
-
-    --color-gradient: linear-gradient(90deg, var(--color-purple-50), var(--color-purple-100), var(--color-purple-200));
+body{
+	background-color: rgb(253, 250, 244);
 }
 
-   * {
-        font-family: 'Poppins', sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+
 
 header {
-  background-color: #af4ac4;
+  background-color: #000000;
   padding: 5px 2%;
-  height: 100px;
-}
-
-.navbar {
-  font-family: 'Poppins', sans-serif;
-  font-size: 100px;
-}
-
-.desc-prod {
-  margin-top: -10px;
-  position: static;
-}
-
-.form-label {
-  margin-left: 65%;
-}
-
-.form-control {
-  margin-top: 2rem;
-  margin-left: 51.5%;
-}
-
-#logo {
-  height: 7px;
-  padding: 7px 2%;
   height: 80px;
-  margin-top: -px;
-}
-
-.logo h2 {
-  font-size: 15px;
-  float: right;
-  color: white;
-  text-align: center;
-  display: flex;
-  margin-top: 10%;
-  margin-left: 20px;
-}
-
-.info-header {
-  color: black;
-  display: flex;
-  justify-content: space-between;
-  margin: auto 10px;
-  margin-top: 5px;
-  align-items: center;
-}
-
-.logo {
-  margin-top: 7px;
-  align-items: center;
-}
-
-.main {
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
-}
-
-#account {
-  height: 120px;
-}
-
-.acc {
-  font-size: 15px;
-}
-
-#botão,
-.button s {
-  width: 100pt;
-  height: 50px;
-  border-radius: 25px;
-  background-color: #71038c;
-  color: white;
-  border-color: black;
-  margin-top: 40px;
-}
-
-.info-header {
-  color: black;
-  display: flex;
-  justify-content: space-between;
-  margin: auto 10px;
-  margin-top: 5px;
-}
-
-.logo {
-  margin-top: 7px;
-}
-
-.informations p {
-  margin-left: 50px;
-  left: 200px;
-}
-
-.Imput {
-  height: 30px;
-  width: 220pt;
-  display: block;
-  margin-bottom: 20px;
 }
 
 
-
-#account {
-  height: 60px;
-  width: 60px;
-}
-
-.informations {
-  margin-top: 40px;
-  flex-direction: row;
-}
-
-.botão:hover {
-  background-color: #a682ff;
-  transition: 0.2s;
+:root {
+  --color-default: #000000;
+  --color-white: #fff;
+  --color-body: #e4e9f7;
+  --color-light: #e0e0e0;
 }
 
 .sidebar {
@@ -152,7 +28,7 @@ header {
   background-color: var(--color-default);
   transition: all 0.5s ease;
   position: fixed;
-  top: 80px;
+  top: 60px;
   left: 0;
 }
 
@@ -169,7 +45,6 @@ header {
 
 .sidebar .logo_details .icon {
   opacity: 0;
-  margin-left: 5px;
   transition: all 0.5s ease;
 }
 
@@ -203,7 +78,7 @@ header {
 }
 
 .sidebar i {
-  margin-left: 20px;
+  margin-left: 10px;
   color: var(--color-white);
   height: 60px;
   line-height: 60px;
@@ -261,15 +136,16 @@ header {
 }
 
 .sidebar li a {
+  margin-left: -20px;
   display: flex;
   height: 100%;
-  width: 80%;
+  width: 100%;
   align-items: center;
   text-decoration: none;
   background-color: var(--color-default);
   position: relative;
   transition: all 0.5s ease;
-  z-index: 2;
+  z-index: 12;
 }
 
 .sidebar li a::after {
@@ -279,10 +155,9 @@ header {
   height: 100%;
   transform: scaleX(0);
   background-color: var(--color-white);
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 5px;
   transition: transform 0.3s ease-in-out;
   transform-origin: left;
-  margin-left: 17px;
   z-index: -2;
 }
 
@@ -372,13 +247,50 @@ header {
   background: none;
 }
 
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .container {
-				max-width: 600px;
-				margin: 20px auto;
-				padding: 20px;
+				max-width: 00px;
+				margin: 10px auto;
+				padding: 0px;
 				background-color: #fff;
-				border-radius: 8px;
-				box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+				border-radius: 4px;
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 				align-items: center;
 			}
 
@@ -394,12 +306,9 @@ header {
 			}
 
 			input[type="text"],
-			input[type="number"],
-			input[type="date"],
-			select,
 			textarea {
 				width: 100%;
-				padding: 10px;
+				padding: 5px;
 				margin-bottom: 20px;
 				border: 1px solid #ccc;
 				border-radius: 4px;
@@ -410,11 +319,25 @@ header {
 				resize: vertical;
 			}
 
-			button {
-				background-color: #a682ff;
-				color: #fff;
-				padding: 10px 20px;
-				border: none;
-				border-radius: 4px;
-				cursor: pointer;
+button {
+	background-color: #a682ff;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
 			}
+			
+			::-webkit-scrollbar{
+  width: 10px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+}
+
+::-webkit-scrollbar-thumb{
+  background: #a682ff;
+  border-radius: 10px;
+}
